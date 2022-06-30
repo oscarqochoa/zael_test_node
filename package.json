@@ -1,5 +1,5 @@
 {
-  "name": "tutorial-express-tdd",
+  "name": "zeal-node",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,7 @@
     "pretty": "prettier --write **/*.{js,json} !node_modules/**",
     "postpretty": "./node_modules/.bin/eslint ./src --fix",
     "test": "jest --coverage",
-    "testWatch": "jest --coverage --watch",
-    "runQuery": "babel-node ./src/utils/runQuery"
+    "testWatch": "jest --coverage --watch"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -20,7 +19,9 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pg": "^8.3.0"
+    "mysql2": "^2.3.3",
+    "pg": "^8.3.0",
+    "sequelize": "^6.21.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -35,6 +36,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "jest": "^26.1.0",
+    "nodemon": "^2.0.18",
     "prettier": "^2.0.5",
     "supertest": "^4.0.2"
   }

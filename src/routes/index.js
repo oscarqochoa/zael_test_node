@@ -1,12 +1,12 @@
 import express from 'express';
-import { indexPage, paginaDeMensajes, guardarMensaje } from '../controllers';
 
-const indexRouter = express.Router();
+const router = express.Router();
 
-indexRouter.get('/', indexPage);
+import { createBingo, getNumber, generateCard, checkWinner } from '../controllers/index';
 
-indexRouter.get('/mensajes', paginaDeMensajes);
+router.post('/create-bingo', createBingo);
+router.get('/get-number/:id', getNumber);
+router.post('/generate-card/:id', generateCard);
+router.post('/check-winner/:id', checkWinner);
 
-indexRouter.post('/mensajes', guardarMensaje);
-
-export default indexRouter;
+export default router;
